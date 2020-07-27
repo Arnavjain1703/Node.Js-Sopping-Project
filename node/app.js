@@ -7,10 +7,12 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const productRoutes = require('./routes/products')
+const authRoutes = require('./routes/auth')
 
 app.use(bodyParser.json());
 
 app.use (productRoutes);
+app.use (authRoutes);
 
 app.use((error,req,res,next)=>{
     console.log(error);
