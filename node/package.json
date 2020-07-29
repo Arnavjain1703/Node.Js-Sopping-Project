@@ -21,6 +21,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.9",
     "mongoose": "^5.9.25",
+    "nodemailer": "^6.4.10",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "parser": "^0.1.4"
   }
 }

@@ -3,7 +3,7 @@ const {validationResult} = require('express-validator');
 
 const fs = require('fs');
 const products = require('../models/products');
-
+const user = require('../models/user');
 
 
 exports.getProducts = (req,res,next)=>
@@ -23,6 +23,23 @@ exports.getProducts = (req,res,next)=>
             })
                 
 }
+exports.addtoCart = (req,res,next)=>
+{
+    user.findById("5f218a798b359454082a4ac9").then(
+        result =>
+        {
+           const User = result;
+           User.cart_Products.push({productId:"5f1c1363f8b5ce5eb4818934",quantity:24})
+           User.save().then(result=>
+            {   
+                res.status(200).json({message:'product updated successfully',Products:result});
+
+            })
+        })  
+       
+                
+}
+
 exports.createProducts = (req,res,next)=>
 {
     const errors = validationResult(req);
