@@ -6,10 +6,10 @@ const isAuth = require('../middleware/is_auth');
 
 const router = express.Router();
 
-router.get('/getProducts',productController.getProducts);
+router.get('/getProducts',isAuth,productController.getProducts);
 
 router.post('/createProduct',productController.createProducts);
 
-router.get('/addtocart',productController.addtoCart);
+router.post('/addtocart',isAuth,productController.addtoCart);
 
 module.exports = router

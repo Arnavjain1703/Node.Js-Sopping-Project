@@ -25,17 +25,37 @@ exports.getProducts = (req,res,next)=>
 }
 exports.addtoCart = (req,res,next)=>
 {
-    user.findById("5f218a798b359454082a4ac9").then(
+    user.findById(req.userId).then(
         result =>
         {
            const User = result;
-           User.cart_Products.push({productId:"5f1c1363f8b5ce5eb4818934",quantity:24})
+           const productId = req.productId;
+           const quantity = req.quantity;
+           const Index = User.cart_Products.findIndex(cp=>
+            {
+                return cp.productId.toString() === productId
+            })
+            if(Index>=0)
+            {
+                User.cart_Products.quantity  = User.cart_Products.quantity + quantity;
+            }
+            else
+            {
+                User.cart_Products.push({productId:"5f1c1363f8b5ce5eb4818934",quantity:quantity})
+            }
+            
+           
            User.save().then(result=>
             {   
                 res.status(200).json({message:'product updated successfully',Products:result});
+                
 
             })
-        })  
+        })
+        .catch(err=>
+            {
+                console.log(err);
+            }) 
        
                 
 }

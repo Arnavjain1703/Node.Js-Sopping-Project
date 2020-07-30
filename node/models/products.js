@@ -11,14 +11,9 @@ const ProductSchema = new Schema({
         type:Number,
         required:true,
     },
-    category1:
+    category:
     {
-        type:String,
-        required:true
-    },
-    category2:
-    {
-        type:String,
+        type:Schema.Types.ObjectId, ref:'category',
         required:true
     },
     ImageUrl1:

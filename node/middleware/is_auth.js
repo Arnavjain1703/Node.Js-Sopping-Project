@@ -1,27 +1,30 @@
 const jwt = require('jsonwebtoken');
 
 module.exports = (req,res,next)=>
-{   const check  = req.get('Authorization');
+{   const check  = req.get('Authorization')
     if(!check)
     {
         const error = new Error('Not Authenticated');
         error.ststusCode = 401;
         throw error;
     }
-    const token  = check.split(' ')[0];
-    console.log(token);
+    const token  = check;
+   
     let decodedToken;
-    try{
+    try{    
+            console.log(token)
             decodedToken = jwt.verify(token,'somesuperdoopersecret');
-    }catch(err)
+            console.log(decodedToken)
+    } catch(err)
     {
-        err.ststusCode = 500;
+        err.statusCode = 500;
         throw err;
     }
+    
     if(!decodedToken)
     {
-        const error =new Error('Not authenticated');
-        error.ststusCode = 401;
+        const error = new Error('Not authenticated');
+        error.statusCode = 401;
         throw error;
     }
     req.userId = decodedToken.userId;
