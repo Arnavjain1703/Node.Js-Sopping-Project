@@ -4,14 +4,15 @@ const {validationResult} = require('express-validator');
 const fs = require('fs');
 const products = require('../models/products');
 const user = require('../models/user');
+const category = require('../models/category');
 
 
 exports.getProducts = (req,res,next)=>
 {
-    products.find().then(
-        result =>
-        {
-           res.status(200).json({message:'Featched posts successfully',Products:result});
+    products.find().populate("products.category").then(
+        products =>
+        {  
+           res.status(200).json({message:'Featched posts successfully',Products:products});
         })  
         .catch(err =>
             {
@@ -27,22 +28,23 @@ exports.addtoCart = (req,res,next)=>
 {
     user.findById(req.userId).then(
         result =>
-        {
+        {   console.log(req.body)
            const User = result;
-           const productId = req.productId;
-           const quantity = req.quantity;
+           const productId = req.body.productId;
+           const quantity = req.body.quantity;
            const Index = User.cart_Products.findIndex(cp=>
             {
-                return cp.productId.toString() === productId
+                return cp.productId.toString() === productId.toString()
             })
+            console.log(Index);
             if(Index>=0)
             {
-                User.cart_Products.quantity  = User.cart_Products.quantity + quantity;
+                User.cart_Products[Index].quantity=User.cart_Products[Index].quantity+ quantity
             }
             else
-            {
-                User.cart_Products.push({productId:"5f1c1363f8b5ce5eb4818934",quantity:quantity})
-            }
+             {
+                User.cart_Products.push({productId:productId,quantity:quantity})
+             }
             
            
            User.save().then(result=>
@@ -72,8 +74,7 @@ exports.createProducts = (req,res,next)=>
     const Products = new products({
         Product_Name : req.body.Product_Name,
         Product_price : req.body.Product_price,
-        category1 : req.body.category1,
-        category2 : req.body.category2,
+        category : req.body.category,
         ImageUrl1 : req.body.ImageUrl1,
         ImageUrl2 : req.body.ImageUrl2,
         ImageUrl3 : req.body.ImageUrl3,

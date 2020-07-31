@@ -13,7 +13,7 @@ const ProductSchema = new Schema({
     },
     category:
     {
-        type:Schema.Types.ObjectId, ref:'category',
+        type:Schema.Types.ObjectId, ref:'categories',
         required:true
     },
     ImageUrl1:
