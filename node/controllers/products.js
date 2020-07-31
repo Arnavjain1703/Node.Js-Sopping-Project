@@ -5,6 +5,7 @@ const fs = require('fs');
 const products = require('../models/products');
 const user = require('../models/user');
 const category = require('../models/category');
+const { clear } = require('console');
 
 
 exports.getProducts = (req,res,next)=>
@@ -49,7 +50,7 @@ exports.addtoCart = (req,res,next)=>
            
            User.save().then(result=>
             {   
-                res.status(200).json({message:'product updated successfully',Products:result});
+                res.status(200).json({message:'product added to cart',Products:result});
                 
 
             })
@@ -98,4 +99,27 @@ exports.createProducts = (req,res,next)=>
                 throw(err);
             })
     
+}
+exports.orderProduct = (req,res,next)=>
+{
+    user.findById(req.userId).then(
+        result =>
+        { const User = result;
+            User.ordered_Products=User.ordered_Products.concat(req.body.orders) 
+          User.cart_Products=[];
+        User.save().then(result=>
+            {   
+                res.status(200).json({message:'product ordered Successfully',Products:result});
+            })
+            .catch(err=>
+                {
+                    console.log(err)
+                })
+        })
+        .catch(err=>
+            {
+                console.log(err)
+            })
+   
+
 }

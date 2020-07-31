@@ -12,4 +12,6 @@ router.post('/createProduct',productController.createProducts);
 
 router.post('/addtocart',isAuth,productController.addtoCart);
 
+router.post('/orderProduct',isAuth,productController.orderProduct);
+
 module.exports = router

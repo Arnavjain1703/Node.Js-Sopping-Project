@@ -21,10 +21,19 @@ const userSchema = new Schema({
     [
        { 
        productId:{type:Schema.Types.ObjectId, ref:'products'},
-       quantity:{type:Number}
+       quantity:{type:Number, required:true}
        }
         
-    ]
+    ],
+    ordered_Products:
+    [
+        {productId:{type:Schema.Types.ObjectId,ref:'products',required:true},
+         quantity:{type:Number, required:true},
+         date:{type:String,required:true}
+        }
+        
+     ]
+    
     
 
 
