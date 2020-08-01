@@ -10,7 +10,7 @@ const { clear } = require('console');
 
 exports.getProducts = (req,res,next)=>
 {
-    products.find().populate("products.category").then(
+    products.find({"category":req.body.category}).populate("products.category").then(
         products =>
         {  
            res.status(200).json({message:'Featched posts successfully',Products:products});

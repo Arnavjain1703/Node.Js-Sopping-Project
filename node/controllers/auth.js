@@ -73,17 +73,13 @@ exports.login = (req, res, next) => {
     let loadedUser;
     user.findOne({
             email: email
-        })
+        }).populate("cart_Products.productId").populate("ordered_Products.productId")
         .then(user => {
           
             if (!user) {
                 const error = new Error('A user with this email could not be found');
                 error.statusCode = 401;
                 throw error;
-            }
-            if(user.cart_Products.productId)
-            {
-                user.populate(user.cart_Products.productId)
             }
 
             loadedUser = user;
