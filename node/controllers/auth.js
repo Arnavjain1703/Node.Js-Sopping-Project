@@ -1,5 +1,7 @@
 const user = require('../models/user');
-const { validationResult} = require('express-validator/check');
+const {
+    validationResult
+} = require('express-validator/check');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const sendgrididTransport = require('nodemailer-sendgrid-transport');
@@ -40,31 +42,35 @@ exports.signup = (req, res, next) => {
     const name = req.body.name;
     const password = req.body.password;
     bcrypt.hash(password, 12).then(
-        hashpw => {
-            const User = new user({
-                email: email,
-                password: hashpw,
-                name: name,
+            hashpw => {
+                const User = new user({
+                    email: email,
+                    password: hashpw,
+                    name: name,
+                });
+                return User.save();
+            }
+        ).then(result => {
+            const token = jwt.sign({
+                email: result.email,
+                userId: result._id.toString()
+            }, "somesuperdoopersecret", {
+                expiresIn: '1h'
             });
-            return User.save();
-        }
-    ).then(result => {
-        const token = jwt.sign({
-            email: result.email,
-            userId: result._id.toString()
-        }, "somesuperdoopersecret", {
-            expiresIn: '1h'
-        });
-        res.status(200).json({message:"User Created",token:token,userId:result._id.toString()})
-    
-    })
+            res.status(200).json({
+                message: "User Created",
+                token: token,
+                userId: result._id.toString()
+            })
 
-    .catch(err => {
-        if (!err.statusCode) {
-            err.statusCode = 500;
-        }
-        next(err);
-    });
+        })
+
+        .catch(err => {
+            if (!err.statusCode) {
+                err.statusCode = 500;
+            }
+            next(err);
+        });
 };
 
 exports.login = (req, res, next) => {
@@ -75,7 +81,7 @@ exports.login = (req, res, next) => {
             email: email
         }).populate("cart_Products.productId").populate("ordered_Products.productId")
         .then(user => {
-          
+
             if (!user) {
                 const error = new Error('A user with this email could not be found');
                 error.statusCode = 401;
@@ -97,7 +103,10 @@ exports.login = (req, res, next) => {
             }, "somesuperdoopersecret", {
                 expiresIn: '1h'
             });
-            res.status(200).json({token:token,user:loadedUser})
+            res.status(200).json({
+                token: token,
+                user: loadedUser
+            })
         })
 
         .catch(err => {
