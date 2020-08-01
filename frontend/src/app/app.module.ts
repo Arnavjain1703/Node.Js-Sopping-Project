@@ -13,6 +13,7 @@ import { ServerService } from './services/server.service';
 import { ProductsComponent } from './products/products.component';
 import { ProductItemsComponent } from './products/product-items/product-items.component';
 import { ProductService } from './services/product.service';
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductService } from './services/product.service';
     NavbarComponent,
     FrontpageComponent,
     ProductsComponent,
-    ProductItemsComponent
+    ProductItemsComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
