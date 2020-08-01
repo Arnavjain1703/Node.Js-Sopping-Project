@@ -30,6 +30,11 @@ export class ServerService
          
           
         }
+        getallProducts(category:String)
+        {
+          const headers = new HttpHeaders({'Content-Type':'application/json','Authorization':this.getToken()});
+         return this.http.post(this.rootUrl+'/getProducts',JSON.stringify({category}),{headers:headers})
+        }
   loggedIn()
   {
     return !!localStorage.getItem('token')

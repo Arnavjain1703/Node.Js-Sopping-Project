@@ -1,0 +1,155 @@
+
+<app-navbar></app-navbar>
+<div class="background">
+<div class="slider">
+
+  
+      
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="2000"  >
+        <!-- Indicators -->
+        <!-- <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol> -->
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img id="slider1" src="/assets/slider2.jpg" alt="...">
+            <div class="carousel-caption">
+              ...
+            </div>
+          </div>
+          <div class="item ">
+            <img id="slider1" src="/assets/slider1.jpg" alt="...">
+            <div class="carousel-caption">
+              ...
+            </div>
+          </div>
+
+          <div class="item ">
+            <img id="slider1" src="/assets/slider3.jpg" alt="...">
+            
+            <div class="carousel-caption">
+              ...
+            </div>
+          </div>
+          ...
+        </div>
+      
+        
+      </div>
+</div>
+
+
+<div class="row ">
+    <div class="col-xs-12 col-md-2 fixed"  >
+
+        <!-- <div class="center font ">Filters</div>
+<div class="row">
+         
+        <div  class="hello col-md-12 col-sm-3 col-xs-12">
+
+
+      <div (click)="show()" class="center">Categories<span class ="glyphicon glyphicon-chevron-down  icon"></span></div>
+    
+         <div [class.disappear]="!display">      
+         <app-product-category  (click)="alert()"
+   
+   
+        *ngFor="let category of categories,let i=index"
+   
+        [category]=category
+   
+        [index]=i
+   
+            > 
+            
+          
+        </app-product-category>
+      
+        
+      
+       </div>
+        
+       </div>
+       <div *ngIf="display5" class="hello col-md-12 col-sm-3 col-xs-12">
+
+       <div (click)="show1()"  class="center ">SubCategories<span class =" glyphicon glyphicon-chevron-down  icon"></span></div>
+
+       <div [class.disappear]="!display1">      
+
+       <app-product-category2 
+                    
+       *ngFor="let category2 of categories2,let i=index"
+
+        [category2]=category2
+        [Index]=i
+  
+       
+       >
+
+        </app-product-category2>
+
+       </div>
+       </div>
+       <div class="hello col-md-12 col-xs-12 col-sm-3">
+
+        <div class="center" (click)="show2()">Top Brands  <span class ="
+          glyphicon glyphicon-chevron-down  icon"></span></div>
+        <div [class.disappear]="!display2">      
+        
+        <div *ngFor=" let Brand of Brands,let i=index">
+         <div class="align">
+
+       <a   (click)="call(Brand)" > <span class="name">{{Brand}}</span></a>  
+
+
+          </div>
+   
+        </div>
+        <div class="align">
+          <a (click)="AllBrand()" > <span class="name"> All Brands</span></a> 
+         </div>
+       </div>
+       </div>
+       <div class="hello col-xs-12 col-sm-3 col-md-12">
+         <div class="center" (click)="show3()">Prices Ranges 
+          <span class ="
+          glyphicon glyphicon-chevron-down  icon"></span>
+         </div>
+         <div [class.disappear]="!display3">      
+         
+         <div *ngFor="let price of Prices ,let i=index">
+           <div class="align">
+             <a (click)="ranges(price)"><span class="name1">Rs {{price.price1}}-{{price.price2}}</span></a>
+           </div>
+         </div>
+         <div class="align">
+          <a (click)="allPrices()" ><span class="name">All Prices</span></a>
+         </div>
+       </div>
+    </div>
+    </div> -->
+    </div>
+    
+    <div class="col-xs-12 col-md-10 shadow" >
+       
+          
+               <app-product-items
+                
+               *ngFor="let product of products ; let i=index "
+                
+               [product]="product"
+               
+               [index]="i">
+
+               </app-product-items>
+          
+
+     </div>
+
+</div>
+</div>
+

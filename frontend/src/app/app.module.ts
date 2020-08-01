@@ -10,6 +10,9 @@ import { FrontpageComponent } from './frontpage/frontpage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ServerService } from './services/server.service';
+import { ProductsComponent } from './products/products.component';
+import { ProductItemsComponent } from './products/product-items/product-items.component';
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { ServerService } from './services/server.service';
     SignupComponent,
     LoginComponent,
     NavbarComponent,
-    FrontpageComponent
+    FrontpageComponent,
+    ProductsComponent,
+    ProductItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,7 @@ import { ServerService } from './services/server.service';
     AppRoutingModule, 
     ReactiveFormsModule
   ],
-  providers: [ServerService,AppComponent],
+  providers: [ServerService,AppComponent,ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -80,6 +80,9 @@ exports.createProducts = (req,res,next)=>
         ImageUrl2 : req.body.ImageUrl2,
         ImageUrl3 : req.body.ImageUrl3,
         ImageUrl4 : req.body.ImageUrl4,
+        sizes     :req.body.sizes,
+        Product_brand:req.body.Product_brand,
+        description:req.body.description
 
     })
     Products.save().then(result=>

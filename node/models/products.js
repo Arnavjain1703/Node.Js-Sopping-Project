@@ -35,6 +35,16 @@ const ProductSchema = new Schema({
     {
         type:String,
         required:true,
+    },
+    sizes:
+    [
+        {type:String}
+    ],
+    description:{type:String,required:true},
+    Product_brand:
+    {
+        type:String,
+        required:true,
     }
     
 
