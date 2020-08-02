@@ -9,7 +9,8 @@ export class Product
     public Product_price:number;
     public Product_brand:string;
     public category:string;
-    public sizes:any[]
+    public sizes:any[];
+    public _id:string
     
 }  
     

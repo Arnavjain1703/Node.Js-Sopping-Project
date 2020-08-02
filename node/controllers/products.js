@@ -29,30 +29,18 @@ exports.addtoCart = (req,res,next)=>
 {
     user.findById(req.userId).then(
         result =>
-        {   console.log(req.body)
+        {  
            const User = result;
            const productId = req.body.productId;
-           const quantity = req.body.quantity;
+           const size = req.body.size;
            const Index = User.cart_Products.findIndex(cp=>
             {
                 return cp.productId.toString() === productId.toString()
-            })
-            console.log(Index);
-            if(Index>=0)
-            {
-                User.cart_Products[Index].quantity=User.cart_Products[Index].quantity+ quantity
-            }
-            else
-             {
-                User.cart_Products.push({productId:productId,quantity:quantity})
-             }
-            
-           
-           User.save().then(result=>
+            })   
+       User.cart_Products.push({productId:productId,size:size})
+       User.save().then(result=>
             {   
                 res.status(200).json({message:'product added to cart',Products:result});
-                
-
             })
         })
         .catch(err=>

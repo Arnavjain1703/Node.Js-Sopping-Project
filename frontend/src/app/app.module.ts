@@ -14,6 +14,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductItemsComponent } from './products/product-items/product-items.component';
 import { ProductService } from './services/product.service';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { ProductBagComponent } from './product-bag/product-bag.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
     FrontpageComponent,
     ProductsComponent,
     ProductItemsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ProductBagComponent
   ],
   imports: [
     BrowserModule,

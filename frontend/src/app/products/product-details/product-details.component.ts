@@ -17,6 +17,8 @@ export class ProductDetailsComponent implements OnInit {
   image3:any;
   image4:any;
   product:Product;
+  productId:string;
+  size:string;
   clicked=false;
   constructor(private route:ActivatedRoute,
               private productService:ProductService,
@@ -25,7 +27,7 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.paramsubscription = this.route.params.subscribe
     ((params:Params)=>
-    {
+    { 
       this.index=+params['id']
     })
     this.product = this.productService.getProduct(this.index);
@@ -33,17 +35,26 @@ export class ProductDetailsComponent implements OnInit {
     this.image2=this.product.ImageUrl2;
     this.image3=this.product.ImageUrl3;
     this.image4=this.product.ImageUrl4;
+    this.productId=this.product._id;
   }
    Add()
    {
-
+      this.serverService.addtocart(this.productId,this.size).subscribe((response)=>
+      {
+        console.log(response)
+      },
+      (error)=>
+      {
+        console.log(error)
+      }
+      )
    }
    oneOrder()
    {
 
    }
-   call()
-   {
+   call(size:string)
+   { this.size=size;
      this.clicked=true;
    }
 

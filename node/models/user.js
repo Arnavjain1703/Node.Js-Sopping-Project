@@ -21,7 +21,7 @@ const userSchema = new Schema({
     [
        { 
        productId:{type:Schema.Types.ObjectId, ref:'products'},
-       quantity:{type:Number, required:true}
+       size:{type:String, required:true}
        }
         
     ],

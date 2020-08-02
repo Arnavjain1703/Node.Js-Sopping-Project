@@ -14,23 +14,7 @@
         
         </div>
 
-<!-- 
-      <div *ngIf="display" class="alert alert-info">
-          
-        <h3>Confirm Order</h3>
-        
-        <button class="btn btn-success " (click)="dplay()"><span class="text">confirm</span>!!</button>
-      
-    </div> -->
 
-      <!-- <div *ngIf="added" class="alert alert-success">
-          
-        <h3> Added to bag</h3>
-    
-     <button class="btn btn-primary" (click)="orders()"><span class="text">ok</span></button>
-    
-    </div>
-           -->
             
 
     <div class="row ">
@@ -76,10 +60,8 @@
 
     <div  >
         
-        <!-- <h3 class="font">{{product.productBrand}}</h3> -->
         <div class="spacing"><span class="key">Brand</span>: <span class="brand"> {{product.Product_brand}}</span></div>
          
-        <!-- <h3>{{product.productDetails}}</h3> -->
         <div class="spacing" ><span class="key">Product Name</span> : <span class="name">{{product.Product_Name}}</span></div>
 
         <div class="detail spacing">{{product.description}}</div>
@@ -87,7 +69,7 @@
         <div class="col-lg-2" *ngFor=" let size of product.sizes,let i =index">
         
        
-             <div (click)="call()" class="spacing2">  <div [class.size]="true" [class.clicked]=""> {{size}}</div></div>
+             <div (click)="call(size)" class="spacing2">  <div [class.size]="true" [class.clicked]=""> {{size}}</div></div>
 
       
                 

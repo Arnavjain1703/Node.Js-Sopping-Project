@@ -35,6 +35,11 @@ export class ServerService
           const headers = new HttpHeaders({'Content-Type':'application/json','Authorization':this.getToken()});
          return this.http.post(this.rootUrl+'/getProducts',JSON.stringify({category}),{headers:headers})
         }
+        addtocart(productId:string,size:string)
+        {
+          const headers = new HttpHeaders({'Content-Type':'application/json','Authorization':this.getToken()});
+         return this.http.post(this.rootUrl+'/addtocart',JSON.stringify({productId,size}),{headers:headers})
+        }
   loggedIn()
   {
     return !!localStorage.getItem('token')
