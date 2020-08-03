@@ -9,6 +9,7 @@ const app = express();
 const productRoutes = require('./routes/products')
 const authRoutes = require('./routes/auth')
 const categoryRoutes = require('./routes/category')
+const cartRoutes = require('./routes/cartProduct')
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -22,6 +23,7 @@ app.use(bodyParser.json());
 app.use (productRoutes);
 app.use (authRoutes);
 app.use(categoryRoutes);
+app.use(cartRoutes);
 
 app.use((error,req,res,next)=>{
     const status = error.statusCode || 500;

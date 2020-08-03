@@ -15,6 +15,8 @@ import { ProductItemsComponent } from './products/product-items/product-items.co
 import { ProductService } from './services/product.service';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { ProductBagComponent } from './product-bag/product-bag.component';
+import { ProductBagItemComponent } from './product-bag/product-bag-item/product-bag-item.component';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { ProductBagComponent } from './product-bag/product-bag.component';
     ProductsComponent,
     ProductItemsComponent,
     ProductDetailsComponent,
-    ProductBagComponent
+    ProductBagComponent,
+    ProductBagItemComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { ProductBagComponent } from './product-bag/product-bag.component';
     AppRoutingModule, 
     ReactiveFormsModule
   ],
-  providers: [ServerService,AppComponent,ProductService],
+  providers: [ServerService,AppComponent,ProductService,CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,6 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { ProductBagComponent } from './product-bag/product-bag.component';
 
 const routes: Routes = [
   {path:'',redirectTo: 'frontpage', pathMatch:'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
     {path:'signup',component:SignupComponent},
     {path:'frontpage',component:FrontpageComponent},
     {path:'products',component:ProductsComponent},
-    {path:'details/:id',component:ProductDetailsComponent}
+    {path:'details/:id',component:ProductDetailsComponent},
+    {path:'bag',component:ProductBagComponent}
 
 ];
 

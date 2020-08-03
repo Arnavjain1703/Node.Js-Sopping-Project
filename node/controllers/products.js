@@ -10,7 +10,7 @@ const { clear } = require('console');
 
 exports.getProducts = (req,res,next)=>
 {
-    products.find({"category":req.body.category}).populate("products.category").then(
+    products.find({"category":req.body.category}).populate("category").then(
         products =>
         {  
            res.status(200).json({message:'Featched posts successfully',Products:products});
@@ -23,31 +23,6 @@ exports.getProducts = (req,res,next)=>
                 }
                 next(err);
             })
-                
-}
-exports.addtoCart = (req,res,next)=>
-{
-    user.findById(req.userId).then(
-        result =>
-        {  
-           const User = result;
-           const productId = req.body.productId;
-           const size = req.body.size;
-           const Index = User.cart_Products.findIndex(cp=>
-            {
-                return cp.productId.toString() === productId.toString()
-            })   
-       User.cart_Products.push({productId:productId,size:size})
-       User.save().then(result=>
-            {   
-                res.status(200).json({message:'product added to cart',Products:result});
-            })
-        })
-        .catch(err=>
-            {
-                console.log(err);
-            }) 
-       
                 
 }
 
@@ -91,26 +66,4 @@ exports.createProducts = (req,res,next)=>
             })
     
 }
-exports.orderProduct = (req,res,next)=>
-{
-    user.findById(req.userId).then(
-        result =>
-        { const User = result;
-            User.ordered_Products=User.ordered_Products.concat(req.body.orders) 
-          User.cart_Products=[];
-        User.save().then(result=>
-            {   
-                res.status(200).json({message:'product ordered Successfully',Products:result});
-            })
-            .catch(err=>
-                {
-                    console.log(err)
-                })
-        })
-        .catch(err=>
-            {
-                console.log(err)
-            })
-   
 
-}

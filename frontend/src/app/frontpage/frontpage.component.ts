@@ -52,7 +52,7 @@ this.myParams = {
 
   menProducts()
 {  this.appComponent.loaders();
-  this.serverService.getallProducts("5f230a70372719a97b0b5b9b")
+  this.serverService.getallProducts("5f284a3d96a44fe635be562b")
   .subscribe(
     response=>
     {  
@@ -81,7 +81,7 @@ this.myParams = {
 womenProducts()
 {
   this.appComponent.loaders();
-  this.serverService.getallProducts("5f2468e190137b58dcbb07ce")
+  this.serverService.getallProducts("5f284a4c96a44fe635be562c")
   .subscribe(
     response=>
     {  
@@ -109,7 +109,7 @@ womenProducts()
 
 kidsProducts()
 {  this.appComponent.loaders()
-  this.serverService.getallProducts("5f2468eb90137b58dcbb07cf")
+  this.serverService.getallProducts("5f284a5596a44fe635be562d")
   .subscribe(
     response=>
     {  
