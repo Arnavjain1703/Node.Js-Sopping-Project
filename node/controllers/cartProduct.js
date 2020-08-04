@@ -7,29 +7,49 @@ const fs = require('fs');
 const { clear } = require('console');
 exports.addtoCart = (req,res,next)=>
 {
-  const Cart = new carts({
-      productId:req.body.productId,
-      userId:req.userId,
-      size:req.body.size
-
-  })
-  Cart.save().then(result=>
+  
+  carts.find({"productId":req.body.productId,"userId":req.userId,"size":req.body.size}).then((product)=>
+  {   
+    if(product.length)
     {
-        res.status(201).json({
-            message:'Product saved to cart successfully',
-            Products:result,
-            creatAt:new Date()
-        });
-    })
-    .catch(err=>
-        {
-            if(!err.statusCode)
-            {
-                err.statusCode = 500;
-            }
-            throw(err);
+        const error=new Error('product already added');
+        error.statusCode=202;
+        next(error)
+        
+    }
+    else{
+            const Cart = new carts({
+            productId:req.body.productId,
+            userId:req.userId,
+            size:req.body.size
+      
         })
-
+        Cart.save().then(result=>
+            {
+                res.status(201).json({
+                    message:'Product saved to cart successfully',
+                    Products:result,
+                    creatAt:new Date()
+                });
+            })
+            .catch(err=>
+                {
+                    if(!err.statusCode)
+                    {
+                        err.statusCode = 500;
+                    }
+                    throw(err);
+                })
+    }
+     
+  })
+  .catch(err => {
+    if (!err.statusCode) {
+        err.statusCode = 500;
+    }
+    throw err
+});
+ 
 }
 exports.getProduct=(req,res,next)=>
 {

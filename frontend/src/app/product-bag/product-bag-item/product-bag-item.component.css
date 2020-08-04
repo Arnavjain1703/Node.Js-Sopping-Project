@@ -1,0 +1,146 @@
+
+.responsive
+{
+    width:100%;
+    height:100px;
+}
+.col-xs-3
+{
+    text-align:center;
+
+}
+.btn-primary
+{
+  padding:2%;
+  background:#F8C471 ;
+  border:2px solid #F8C471;
+}
+.glyphicon-chevron-down
+{
+    font-size:10px;
+}
+.item
+{
+    margin:2% 10%;
+     background:white;
+    padding: 1%;
+    box-shadow:1px 2px 4px #D0D3D4 ;
+    border-radius:1%;
+}
+.brand
+{
+    color:#1B4F72 ;
+   
+    font-size: 170%;
+    letter-spacing:1px;
+     font-weight:600;
+    font-family: 'Montserrat', sans-serif
+}
+.price,.name,.quantity,.cross
+{
+    color:#1B4F72 ;
+    
+    margin-top:2%;
+    font-family: 'Roboto Mono', monospace;
+    font-weight:500;
+    font-size:120%;
+}
+.quantity,.cross{
+    margin:5%;
+}
+.cross{
+    text-align:right;
+}
+
+.dropdown
+{
+    
+     background:#F9E79F ;
+     position:fixed;
+     top:40%;
+     left:50%;
+    width:150px;
+    z-index: 1;
+    
+     box-shadow:0px 0px 2px #D0D3D4 ;
+     box-shadow:0px 0px 3px #BFC9CA;
+     border-radius:1%;
+     animation :change 1s 1;
+     text-align:center;
+       border-radius:3%;
+}
+
+.button
+{
+    
+    background:#F9E79F;
+    border:2px solid #F9E79F;
+    color:#2471A3 ;
+    transition: color 0.3s;
+
+
+}
+
+.button:hover
+{
+color:white;
+}
+
+
+
+@keyframes change
+{
+    from
+    {
+        top:0%;
+    }
+    to{
+        top:40%;
+    }
+
+}
+
+@media only screen and (max-width: 768px)
+{
+    .item{
+        margin:2% 2%;
+    }
+}
+@media only screen and (max-width: 671px)
+{
+    
+    .brand
+    {
+        font-size: 150%;
+    }
+
+    .price,.name,.quantity,.cross
+    {
+        font-size:80%;
+    }
+
+
+}
+@media only screen and (max-width: 521px)
+{
+    .brand
+    {
+        font-size: 120%;
+    }
+    .responsive{
+        width:80%;
+        height:70px;
+    }
+    .price,.name,.quantity,.cross
+    {
+        font-size:70%;
+    }
+
+    
+
+}
+@media only screen and (max-width: 521px)
+{
+    
+}
+

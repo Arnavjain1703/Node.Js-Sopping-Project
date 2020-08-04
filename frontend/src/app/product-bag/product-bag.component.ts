@@ -12,21 +12,20 @@ export class ProductBagComponent implements OnInit {
 
   constructor(private ServerService:ServerService,
               private cartService:CartService) { }
-  products:Cartproduct[];
+  products:any[]=[];
   cartSubscription:Subscription;
   ngOnInit(): void {
     // this.cartSubscription = this.cartService.CartProductChanged.subscribe(products=>
     //   {
     //     this.products = products;
     //   })
-    //   this.ServerService.getcartProduct().subscribe((response:any)=>
-    //   {
-    //       this.cartService.setService(response.Products)
-    //       this.products = response.Products
+      this.ServerService.getcartProduct().subscribe((response:any)=>
+      {
+          this.products = response.Products
           
           
-    //   })
-     
+      })
+      
   }
 order()
 {

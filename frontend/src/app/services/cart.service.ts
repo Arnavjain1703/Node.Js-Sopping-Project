@@ -1,34 +1,32 @@
 import { Subject } from 'rxjs';
-import { Cartproduct } from '../models/cart.module';
+import { Product } from '../models/product.module';
 
 export class CartService
 
 {
 
 
-    CartProductChanged=new Subject<Cartproduct[]>();
+    CartProductChanged=new Subject<any[]>();
     
-    private products:Cartproduct[]=[
+    private products:any[]=[
 
     ]
 
     getProducts()
     {
-        return this.products;
-        console.log(this.products)
+        return this.products
     }
 
     getProduct(index:number)
     {
         return this.products.slice()[index];
     }
+
     
-    
-    setService(products:Cartproduct[])
+    setService(products:any[])
     {
         this.products=products;
         this.CartProductChanged.next(this.products);
-        
         
     }
 

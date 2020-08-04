@@ -11,10 +11,10 @@
         
        
           <app-product-bag-item 
-          *ngFor="let product of products; let i=index" 
-           >
-           a
-    
+          *ngFor="let product of products, let i=index" 
+          [product]="product"
+          [index]="index" >
+             
          </app-product-bag-item>
 
     </div>

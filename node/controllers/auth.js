@@ -55,7 +55,7 @@ exports.signup = (req, res, next) => {
                 email: result.email,
                 userId: result._id.toString()
             }, "somesuperdoopersecret", {
-                expiresIn: '1h'
+                expiresIn: '24h'
             });
             res.status(200).json({
                 message: "User Created",
@@ -101,7 +101,7 @@ exports.login = (req, res, next) => {
                 email: loadedUser.email,
                 userId: loadedUser._id.toString()
             }, "somesuperdoopersecret", {
-                expiresIn: '1h'
+                expiresIn: '24h'
             });
             res.status(200).json({
                 token: token,

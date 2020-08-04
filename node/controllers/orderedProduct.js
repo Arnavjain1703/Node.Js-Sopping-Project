@@ -33,7 +33,7 @@ exports.order= (req,res,next)=>
 }
 exports.getorder=(req,res,next)=>
 {
-    orders.find({"userId":req.userId}).populate("orders.productId")
+    orders.find({"userId":req.userId}).populate("productId")
     .then(orders=>
         {
             res.status(200).json({message:'Featched posts successfully',Products:orders});
