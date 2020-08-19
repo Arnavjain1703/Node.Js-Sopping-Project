@@ -16,13 +16,24 @@ export class CartService
     {
         return this.products
     }
-
+    addtocart(product:any)
+    {
+         this.products.push(product);
+         this.CartProductChanged.next(this.products)
+    }
     getProduct(index:number)
     {
         return this.products.slice()[index];
     }
 
-    
+    updateQuantity(index:number,quantity:any)
+    {
+        this.products[index].quantity=quantity
+        this.CartProductChanged.next(this.products)
+        console.log(this.products[index])
+        console.log(index)
+        
+    }
     setService(products:any[])
     {
         this.products=products;

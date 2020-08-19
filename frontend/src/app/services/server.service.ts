@@ -45,6 +45,11 @@ export class ServerService
           const headers = new HttpHeaders({'Content-Type':'application/json','Authorization':this.getToken()});
           return this.http.get(this.rootUrl+'/getcartproduct',{headers:headers});
         }
+        order(orders:any[])
+        {
+          const headers = new HttpHeaders({'Content-Type':'application/json','Authorization':this.getToken()});
+          return this.http.post(this.rootUrl+'/order',JSON.stringify({orders}),{headers:headers})
+        }
   loggedIn()
   {
     return !!localStorage.getItem('token')

@@ -9,9 +9,10 @@
     </div>
     <div class="col-xs-3">
         <div class="name">{{product.productId.Product_Name}}</div>
+        <div class="quantity">Quantity :{{quantity}}</div>
     </div>
     <div class="col-xs-3">
     <div> <span class="size">{{product.size}}</span>   <span  class="cross"><span class="glyphicon glyphicon-remove"></span></span></div>
-        <div  class="btn btn-primary">Quantity <span class="glyphicon glyphicon-chevron-down"></span></div>
+        <div (click)="drop()" class="btn btn-primary">Quantity <span class="glyphicon glyphicon-chevron-down"></span></div>
     </div>
 </div>

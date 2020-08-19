@@ -21,7 +21,7 @@ export class ProductService
     {
         return this.products.slice()[index];
     }
-
+   
     
     setService(products:Product[])
     {

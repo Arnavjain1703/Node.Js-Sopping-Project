@@ -17,6 +17,8 @@ export class ProductsComponent implements OnInit {
     this.ProductSubscription=this.ProductService.ProductChanged.subscribe((products:Product[])=>
       {
         this.products=products;
+        
+       
         this.ProductSubscription.unsubscribe()
       })
      this.products=this.ProductService.getProducts() 
