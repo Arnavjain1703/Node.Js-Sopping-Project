@@ -1,0 +1,78 @@
+.upper
+{
+    
+    background:black;
+    opacity:0.4;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    position: absolute;
+}
+.picture
+{
+    
+    background-image:url('../../assets/landing.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh !important;
+}
+.name
+{
+    font-size: 6vw;
+    padding-top:7vh;
+    padding-left: 10vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: 6px;
+}
+.Arihant,.Industry
+{
+    color: white;
+    position: relative;
+    z-index: 3;
+}
+.Industry
+{
+    color:#BFD62F
+}
+.round
+{
+    width: 27vw;
+    height: 27vw;
+    border: 10px solid #BFD62F;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+}
+.top
+{
+    padding-top:27vh;
+    width: 100vw;
+}
+.align
+{
+    padding-left: 4vw;
+}
+
+@media screen and (max-width: 575px) {
+.top
+{
+    text-align:center;
+    padding-top:15vh;
+}   
+.align
+{
+    padding-left: 20vw;
+    padding-top: 10vh;
+   
+}
+.round{
+    width: 70vw;
+    height: 70vw;
+}
+.name{
+
+    font-size: 10vw;
+}
+}

@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light background fixed" >
+    <a class="navbar-brand " routerLink = "/homepage"><img class="image" src={{image}}></a>
+     
+     <button [class.cross]="cross"(click) ="click()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+       
+         
+           <span class="line"></span>
+           <span class="line"></span>
+           <span class="line"></span>
+     
+         
+     </button>
+   
+     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+       <ul class="navbar-nav margin ">
+ 
+         <li class="item small" (click) ="click()" data-toggle="collapse" aria-expanded="false" data-target="#navbarTogglerDemo02">
+           <a  routerLink = "/upload"> UPLOAD</a>
+         </li>
+         <li  class="item small" (click) ="click()" data-toggle="collapse" aria-expanded="false" data-target="#navbarTogglerDemo02">
+          <a  routerLink = "/event">  EVENTS </a>
+         </li>  
+         <li class="item small" (click) ="click()" data-toggle="collapse" aria-expanded="false" data-target="#navbarTogglerDemo02">
+          <a  routerLink ="/aboutus">  ABOUT US </a>
+         </li> 
+         <li class="item small" (click) ="click()" data-toggle="collapse" aria-expanded="false" data-target="#navbarTogglerDemo02">
+           <a  routerLink href = '/#contactus'  fragment="contactus">CONTACT US</a>
+         </li> 
+     
+         <li class="item large">
+           <a  routerLink = "/upload"> UPLOAD</a>
+         </li>
+         <li class="item large" >
+          <a  routerLink = "/event">  EVENTS </a>
+         </li>  
+         <li class="item large" >
+          <a  routerLink ="/aboutus">  ABOUT US </a>
+         </li> 
+         <li class="item large" >
+           <a  routerLink href = '/#contactus'  fragment="contactus">CONTACT US</a>
+         </li> 
+       </ul>
+     
+     </div>
+   </nav>

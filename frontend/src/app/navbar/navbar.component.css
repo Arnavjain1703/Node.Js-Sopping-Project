@@ -1,0 +1,231 @@
+.background
+{
+    background: #231F20;
+    min-height: 4vw;
+    width: 98vw;
+}
+
+.image
+{
+  height: 3vw;
+
+}
+.small
+{
+  display: none;
+}
+.navbar-brand{
+  padding-left: 3vw;
+}
+button {
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+  outline: none;
+  display: block;
+  position: fixed;
+  width: 50px;
+  height: auto;
+  left: 83vw;
+  top: 0.5vw;
+   margin-right: 2vw;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s cubic-bezier(0.81, -0.47, 0.29, 1.38);
+  -moz-transition: all 0.5s cubic-bezier(0.81, -0.47, 0.29, 1.38);
+  -o-transition: all 0.5s cubic-bezier(0.81, -0.47, 0.29, 1.38);
+  transition: all 0.5s cubic-bezier(0.81, -0.47, 0.29, 1.38);
+  /* custom */
+  -webkit-transition-timing-function: cubic-bezier(0.81, -0.47, 0.29, 1.38);
+  -moz-transition-timing-function: cubic-bezier(0.81, -0.47, 0.29, 1.38);
+  -o-transition-timing-function: cubic-bezier(0.81, -0.47, 0.29, 1.38);
+  transition-timing-function: cubic-bezier(0.81, -0.47, 0.29, 1.38);
+  /* custom */
+  -webkit-transition-delay: 0.12s;
+  /* Safari */
+  transition-delay: 0.12s;
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+button.cross {
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+button.cross .line:first-child {
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+button.cross .line:last-child {
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+button .line {
+  display: block;
+  float: left;
+  width:  100%;
+  height: 7px;
+  margin: 3px 0;
+  z-index: 5;
+  border-radius: 5px;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s cubic-bezier(1, 0.01, 0, 1);
+  -moz-transition: all 0.5s cubic-bezier(1, 0.01, 0, 1);
+  -o-transition: all 0.5s cubic-bezier(1, 0.01, 0, 1);
+  transition: all 0.5s cubic-bezier(1, 0.01, 0, 1);
+  /* custom */
+  -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
+  -moz-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
+  -o-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
+  transition-timing-function: cubic-bezier(1, 0.01, 0, 1)
+
+  /* custom */
+}
+button .line:first-child {
+  width: 50%;
+  -ms-transform-origin: 100% 50%;
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+button .line:last-child {
+  float: right;
+  width: 50%;
+  -ms-transform-origin: 0 50%;
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+
+.color
+{
+color:white
+}
+
+.fixed
+{
+    position:fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+    
+    
+}
+.both-line
+{
+  color: white;
+}
+.item{
+  font-size: 1.5vw;
+  letter-spacing: 1px;
+  width: 10vw;
+  text-align: center;
+  color: #ffffff;
+  z-index: 4;
+  
+  cursor: pointer;
+transition:all .2s ease-in-out;
+  
+
+}
+a{
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.item:hover{
+  
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.width
+{
+  width: 11vw;
+
+}
+.margin
+{
+  margin-left: 50% ;
+
+}
+
+@media screen and (max-width: 991px) {
+  .item{
+    font-size: 3vw;
+ 
+    width: 100%;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.margin{
+    
+  margin: 0%;
+}
+.background
+{
+    min-height: 5vw;
+}
+
+}
+@media screen and (max-width: 992px) {
+  .large
+{
+  display:none;
+}
+.small{
+  display:block;
+}
+}
+@media screen and (max-width: 565px) {
+
+.item{
+  font-size: 7vw;
+}
+.image{
+  height:20px;
+}
+
+
+
+}
+

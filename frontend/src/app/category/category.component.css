@@ -1,0 +1,28 @@
+.background
+{
+    background: #BFD62F;
+    width: 100vw;
+    height: 300px;
+    padding-top:10px;
+    padding-left:10px;
+}
+.row
+{
+    width: 100vw;
+}
+.font
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size:23px;
+    word-spacing: 7px;
+}
+.form
+{
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+
+
+}
+
