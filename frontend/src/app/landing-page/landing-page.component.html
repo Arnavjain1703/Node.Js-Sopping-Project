@@ -1,3 +1,7 @@
+<button style="display:none" #click href="#carouselExampleControls" data-slide="next" class="btn btn-success">click</button>
+<button   style="display:none" #click2 href="#carouselExample" data-slide="next" class="btn btn-success">click2</button>
+<button   style="display:none" #click3 href="#mobile1" data-slide="next" class="btn btn-success">click2</button>
+<button   style="display:none" #click4 href="#mobile2" data-slide="next" class="btn btn-success">click2</button>
 <div class="upper">
         
 </div>
@@ -12,9 +16,20 @@
            </div>
        </div>
        <div class="col-sm-5  col-12 align">
-            <div class="round ">
-
-            </div>
+            <!-- <div class="round"> -->
+                <!-- <img class="image" src="../../assets/photoshop.png"> -->
+                <div id="carouselExample" class="carousel slide " data-pause = "false">
+                    <div class="carousel-inner">
+                      <div class="img-zoom-in" *ngFor="let item of images; let k = index" [ngClass]="k == 0 ? 'carousel-item active' : 'carousel-item'" >
+                        <div class="opacity image3" [ngStyle] = "{'background-image':'url('+TOP+')'}"></div>
+                
+                              <img class="image" [src]=item  alt={{item.heading}} >
+                            </div>
+                         
+                    </div>
+                 
+                  </div>
+            <!-- </div> -->
        </div>
    </div>
 </div>

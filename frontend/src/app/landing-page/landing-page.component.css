@@ -36,14 +36,22 @@
 {
     color:#BFD62F
 }
-.round
+/* .round
 {
-    width: 27vw;
-    height: 27vw;
+    width: 30vw;
+    height: 30vw;
     border: 10px solid #BFD62F;
     border-radius: 50%;
     position: relative;
     z-index: 3;
+    text-align: center;
+} */
+.image
+{
+    height:25vw;
+    position: relative;
+    left:-4vw;
+    z-index: 4;
 }
 .top
 {
@@ -52,7 +60,7 @@
 }
 .align
 {
-    padding-left: 4vw;
+    padding-left: 2vw;
 }
 
 @media screen and (max-width: 575px) {
@@ -67,12 +75,17 @@
     padding-top: 10vh;
    
 }
-.round{
+/* .round{
     width: 70vw;
-    height: 70vw;
-}
+    height: 70vw; */
+/* } */
 .name{
 
     font-size: 10vw;
+}
+.image
+{
+    height:60vw;
+    left: -12vw;
 }
 }
