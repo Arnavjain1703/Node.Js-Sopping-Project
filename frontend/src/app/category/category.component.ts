@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CategoryComponent implements OnInit {
 
   constructor() { }
-  category:string[]=["A","A","A","A","A"];
+  category:string[]=["../../assets/photoshop2.png","../../assets/photoshop.png","../../assets/photoshop2.png","../../assets/photoshop.png","../../assets/photoshop2.png"];
   ngOnInit(): void {
   }
 

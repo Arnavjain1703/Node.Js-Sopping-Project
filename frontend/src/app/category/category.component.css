@@ -2,27 +2,70 @@
 {
     background: #BFD62F;
     width: 100vw;
-    height: 300px;
     padding-top:10px;
-    padding-left:10px;
+    padding-left:8px;
 }
 .row
 {
     width: 100vw;
 }
-.font
+.font,.font2
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size:23px;
     word-spacing: 7px;
 }
+
+.font2{
+    color: white;
+    margin-top: 70px;
+}
 .form
 {
     color: white;
     font-family: 'Pacifico', cursive;
     font-weight: 100;
-
-
+}
+.container
+{
+    height: 300px;
+    width:20vw;
+    text-align: center;
+    padding-top:25px;
+    padding-bottom: 25px;
+    transition: 0.1s;
+    cursor: pointer;
+    border-right:1px solid white ;
 }
 
+.container:hover
+{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.image
+{
+    width: 10vw;
+}
+@media screen and (max-width: 768px) {
+.container
+{
+   
+    width:25vw;
+    height:200px;
+}
+.image{
+    width: 13vw;
+}
+}
+@media screen and (max-width: 500px) {
+    .container
+    {
+      
+        width:50vw;
+       
+    }
+    .image{
+        width: 30vw;
+    }
+    }

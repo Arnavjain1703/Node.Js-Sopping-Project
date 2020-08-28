@@ -20,15 +20,13 @@
                 <!-- <img class="image" src="../../assets/photoshop.png"> -->
                 <div id="carouselExample" class="carousel slide " data-pause = "false">
                     <div class="carousel-inner">
-                      <div class="img-zoom-in" *ngFor="let item of images; let k = index" [ngClass]="k == 0 ? 'carousel-item active' : 'carousel-item'" >
-                        <div class="opacity image3" [ngStyle] = "{'background-image':'url('+TOP+')'}"></div>
+                      <div class="img-zoom-in center" *ngFor="let item of images; let k = index" [ngClass]="k == 0 ? 'carousel-item active' : 'carousel-item'" >
                 
                               <img class="image" [src]=item  alt={{item.heading}} >
                             </div>
                          
                     </div>
-                 
-                  </div>
+                 </div>
             <!-- </div> -->
        </div>
    </div>

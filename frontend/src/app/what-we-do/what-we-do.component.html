@@ -1,0 +1,34 @@
+<button style="display:none" #click href="#carouselExampleControls" data-slide="next" class="btn btn-success">click</button>
+<button   style="display:none" #click2 href="#carouselExample2" data-slide="next" class="btn btn-success">click2</button>
+<button   style="display:none" #click3 href="#mobile1" data-slide="next" class="btn btn-success">click2</button>
+<button   style="display:none" #click4 href="#mobile2" data-slide="next" class="btn btn-success">click2</button>
+
+<div class="background">
+    <!-- <p class="font">WHAT WE DO</p> -->
+<div class="row center">
+    <div class="col-md-5 col-xs-12 padding1">
+        <div class="box">
+        <div id="carouselExample2" class="carousel slide carousel-fade" data-pause = "false">
+            <div class="carousel-inner">
+              <div class="img-zoom-in center" *ngFor="let item of images; let k = index" [ngClass]="k == 0 ? 'carousel-item active' : 'carousel-item'" >
+        <img class="image" [src]="item">
+        <div class="upper">
+            
+        </div>
+              </div>
+            </div>
+            </div>
+         </div>
+        
+    </div>
+    <div class="col-md-7 col-xs-12 padding2">
+        Lorem ipsum, or lipsum as it is 
+        known, is dummy  laying out 
+        print, graphic or web designs. 
+        The passage is attributed to an 
+        unknown typesetter in the 15th 
+        century who is thought to have 
+        scrambled parts of Cicero's De
+    </div>
+</div>
+</div>

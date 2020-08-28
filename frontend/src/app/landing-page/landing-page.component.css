@@ -8,6 +8,10 @@
     z-index: 2;
     position: absolute;
 }
+.center
+{
+    text-align: center;
+}
 .picture
 {
     
@@ -48,9 +52,9 @@
 } */
 .image
 {
-    height:25vw;
+    height:17vw;
     position: relative;
-    left:-4vw;
+    
     z-index: 4;
 }
 .top
@@ -85,7 +89,7 @@
 }
 .image
 {
-    height:60vw;
-    left: -12vw;
+    height:40vw;
+    
 }
 }

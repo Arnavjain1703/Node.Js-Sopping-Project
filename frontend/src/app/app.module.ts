@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CategoryComponent } from './category/category.component';
+import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     NavbarComponent,
-    CategoryComponent
+    CategoryComponent,
+    WhatWeDoComponent
   ],
   imports: [
     BrowserModule,
