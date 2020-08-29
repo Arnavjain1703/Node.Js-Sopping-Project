@@ -1,0 +1,25 @@
+agm-map {
+    height: 40vh;
+    width: 70%;
+   
+    
+  }
+  /* .bor
+  {
+    border: 10px solid black;
+    border-radius: 20%;
+    text-align: center;
+  }
+   */
+
+  .padding
+  {
+    padding:3vw 3vw;
+    background:#BFD62F;
+    text-align: center;
+    
+  }
+  .col-md-6
+  {
+    text-align: center;
+  }

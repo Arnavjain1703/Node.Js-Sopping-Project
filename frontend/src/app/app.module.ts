@@ -7,6 +7,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CategoryComponent } from './category/category.component';
 import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
+import { AgmCoreModule } from '@agm/core';
+import { GoogleMapComponent } from './google-map/google-map.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,16 @@ import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
     LandingPageComponent,
     NavbarComponent,
     CategoryComponent,
-    WhatWeDoComponent
+    WhatWeDoComponent,
+    GoogleMapComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: ''
+    })
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
