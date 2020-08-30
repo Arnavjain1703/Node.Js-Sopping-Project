@@ -1,25 +1,63 @@
-agm-map {
-    height: 40vh;
-    width: 70%;
-   
-    
+agm-map{
+   height: 50vh !important;
+   width: 50vh;
+} 
+.padding
+{
+  padding: 4vw 13vw;
+}
+.relative
+{
+  border: 4px solid #bfd62e;
+  height: 50vh !important;
+   width: 50vh;
+   position: absolute;
+   top: 0;
+   left: -1;
+}
+.image
+{
+  width: 60%;
+}
+.col-sm-6
+{
+  text-align: center;
+}
+@media screen and (max-width: 1025px) {
+  .padding{
+    padding: 4vw 7vw;
   }
-  /* .bor
-  {
-    border: 10px solid black;
-    border-radius: 20%;
-    text-align: center;
+  agm-map,.relative{
+    height: 40vh !important;
+    width: 40vh;
+ } 
+ .image{
+   width:80%;
+ }
+ .row
+ {
+   width: 100vw;
+ }
+  
+}   
+@media screen and (max-width: 576px) {
+  .image{
+    display: none;
   }
-   */
-
   .padding
   {
-    padding:3vw 3vw;
-    background:#BFD62F;
-    text-align: center;
-    
+    padding: 4vw 20vw ;
   }
-  .col-md-6
+}
+@media screen and (max-width: 375px) {
+  .padding
   {
-    text-align: center;
+    padding: 4vw 16vw ;
   }
+}
+@media screen and (max-width: 320px) {
+  .padding
+  {
+    padding: 4vw 10vw ;
+  }
+}

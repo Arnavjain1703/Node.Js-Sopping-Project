@@ -1,0 +1,159 @@
+.footer
+{
+    background: #231F20;
+    color: white;
+    font-family: Bebas Neue;
+    position: relative;
+    z-index:1;
+    padding: 3vh 7vw 20px 10vw !important;
+    font-size: 130%;
+    letter-spacing: 2px;
+    height: 30vh;
+}
+.padding
+{
+   padding: 10px 4vw 5px 1vw !important;
+}
+.web-item
+{
+    padding-left: 5vw;
+}
+
+.col-sm-4
+{
+    padding: 0px 0px;
+}
+a{
+   color: white;
+   transition: all 0.2s;
+   text-decoration: none;
+}
+a:hover{
+    color:red !important;
+}
+.policy-item,.item,.number,.email,.address
+{
+  margin:10px;
+}
+.mobile
+{
+    display:none;
+}
+.software
+{
+    text-align: right;
+    word-spacing:4%;
+    letter-spacing: 2px;
+    background: black;
+    color: white;
+    font-size:100%;
+    font-family: Bebas Neue;
+    padding:0.7% 30px;
+    border-bottom:1px solid black;
+    border-top:0.1px solid #D0D3D4;
+    
+    position: relative;
+    z-index:1;
+    width: 100vw;
+}
+
+.Si{
+    word-spacing: 4px;
+    color: #3f95ea;
+  
+  }
+  .image
+{
+    height: 1.5vw;
+    
+}.space
+{
+    margin: 0px 8px;
+   
+}
+.image2
+{
+    width: 40%;
+}
+#hover2
+{
+    transition: all 0.4s;
+}
+#hover2:hover
+{
+    transform: scale(1.2);
+}
+@media only screen and (max-width: 1025px)
+{
+    .footer
+    {
+        font-size: 85%;
+    }
+}
+@media only screen and (max-width: 1025px)
+{
+    .footer
+    {
+        font-size: 85%;
+      
+    }
+}
+@media only screen and (max-width: 768px)
+{
+    .footer
+    {
+        font-size: 65%;
+      
+    }
+    .image{
+        height:20px;
+    }
+     .email{
+         width: 33vw;
+     }
+}
+
+@media only screen and (max-width: 576px)
+
+{    
+    .footer{
+        width: 100vw;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-top: 5px !important;
+        font-size: 3vw;
+        height: 50vh;
+    }
+    .item2,.policy-item2,.number2,.email2,.address2
+    {
+        margin-top: 1vh;
+    }
+   
+    .image2{
+        margin-top:20px;
+    }
+   .web
+   {
+       display: none;
+   }
+   .mobile
+   {
+       display: block;
+   }
+   .mobile-item,.policy2,.contact2
+   {
+     text-align:center;
+      margin-bottom:20px;
+   }
+  .center
+  {
+      text-align: center;
+  }
+  .padding
+  {
+      padding-top:0px;
+      width: 100vw;
+      margin-left: 0px;
+      margin-right: 0px;
+  }
+}

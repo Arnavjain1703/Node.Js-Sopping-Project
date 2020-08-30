@@ -9,6 +9,9 @@ import { CategoryComponent } from './category/category.component';
 import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
 import { AgmCoreModule } from '@agm/core';
 import { GoogleMapComponent } from './google-map/google-map.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,14 @@ import { GoogleMapComponent } from './google-map/google-map.component';
     NavbarComponent,
     CategoryComponent,
     WhatWeDoComponent,
-    GoogleMapComponent
+    GoogleMapComponent,
+    FooterComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AgmCoreModule.forRoot({
       apiKey: ''
     })

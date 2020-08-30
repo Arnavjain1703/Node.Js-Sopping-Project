@@ -13,5 +13,5 @@ export class GoogleMapComponent implements OnInit {
   }
   lat = 29.269676;
   lng = 77.729979;
-  zoom: number = 8;
+  zoom: number = 15;
 }
