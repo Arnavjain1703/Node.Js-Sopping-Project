@@ -3,6 +3,7 @@
     background: url("../../assets/background.png");
     height: 100vh;
     background-attachment: fixed;
+    
 }
 .row
 {
@@ -18,6 +19,7 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 2vw;
+    font-weight: 800px;
 }
 .padding2
 {
@@ -33,29 +35,43 @@
 {
     width:23vw;
     border: 7px solid  #bfd62e;
-    height: 450px;
+    max-height:27vw;
+    overflow: hidden;
 }
-.image,.upper
+.image
 {
     width: 23vw;
-    height:435px;
+    position: relative;
+    z-index: 0;
+    height:27vw;
+    
 }
 
 .upper{
     background: black;
-    opacity: 0.3;
-    position: relative;
-    z-index: 1;
+    opacity:0.4;
+    position:absolute;
+    z-index: 4;
     top:-432px;
+    height: 1000vh;
+    width: 1000vh;
    
 }
 .font
 {
-    color: #bfd62e;
+    color: white;
     font-size: 50px;
-    padding:30px 0px 0px 50px;
-    font-weight: 600;
-
+    padding-left: 38vw;
+    font-weight: 500;
+    padding-top: 50px;
+    letter-spacing:2px;
+    
+}
+.border
+{
+    width: 400px;
+    border: 1px color white;
+    text-align: center;
 }
 @media screen and (max-width: 1024px) {
     .padding1{
@@ -63,11 +79,12 @@
     }
     .box{
         width: 25vw;
-        height: 300px;
+        max-height: 250px;
+        overflow: hidden;
     }
     .image,.upper{
         width: 25vw;
-         height: 290px;
+        
     }
     .upper
     {
@@ -97,6 +114,7 @@
         top:-290px;
     }
 }
+
 @media screen and (max-width: 500px) {
     .padding1{
         padding-left: 20vw; 
@@ -109,6 +127,14 @@
     .center{
         font-size:3vh;
     }
+    .font{
+        font-size: 20px;
+        padding-left:32vw;
+    }
+    .border
+    {
+        width: 170px;
+    }
     .box{
         width: 70vw;
         height: 300px;
@@ -120,5 +146,16 @@
     .upper
     {
         top:-290px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .font{
+        padding-left:28vw;
+    }
+}
+@media screen and (max-width: 321px) {
+    .font{
+        padding-left:25vw;
     }
 }

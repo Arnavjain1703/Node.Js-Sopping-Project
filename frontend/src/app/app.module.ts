@@ -12,6 +12,8 @@ import { GoogleMapComponent } from './google-map/google-map.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule } from '@angular/forms';
+import { ProductItemComponent } from './product-item/product-item.component';
+import { FrontPageComponent } from './front-page/front-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     WhatWeDoComponent,
     GoogleMapComponent,
     FooterComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ProductItemComponent,
+    FrontPageComponent
   ],
   imports: [
     BrowserModule,

@@ -122,7 +122,8 @@ a:hover{
         padding-right: 0px !important;
         padding-top: 5px !important;
         font-size: 3vw;
-        height: 50vh;
+        height: 370px;
+       
     }
     .item2,.policy-item2,.number2,.email2,.address2
     {
@@ -156,4 +157,10 @@ a:hover{
       margin-left: 0px;
       margin-right: 0px;
   }
+}
+@media only screen and (max-width: 375px)
+{
+    .footer{
+        font-size:4vw
+    }
 }

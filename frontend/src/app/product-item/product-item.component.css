@@ -1,0 +1,124 @@
+.background
+{
+   height: 100vh;
+ 
+   background-size: cover;
+   background-position: center;
+   filter: blur(3px);
+    position:fixed;
+    top:0;
+
+}
+
+.products
+{
+    min-height: 100vh;
+    position: relative;
+    z-index: 3;
+    margin-top:100px;
+}
+.image2
+{
+    width: 100vw;
+    height: 100vh;
+}
+.image{
+    width: 20%;
+
+}
+.center
+{
+    text-align: center;
+  
+}
+.container
+{
+    min-height: 10vw;
+    width:18vw;
+    padding: 0px ;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: 0.1s;
+    cursor: pointer;
+    background: white;
+    margin-left: 1vw;
+    margin-bottom: 50px;
+   
+}
+.image3{
+    width: 50%;
+    transition:0.5s;
+}
+.img-background
+{
+    
+    padding-top:25px;
+    background:#bfd62e;
+}
+.name
+{
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-size:20px;
+    letter-spacing: 2px;
+
+}
+.container:hover .image3
+{
+    transform: scale(1.4);
+
+}
+.row
+{
+    width: 100vw;
+    padding-left: 2vw;
+    margin-top: 60px;
+    margin-right: 0px;
+    
+}
+p{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    font-size:1vw;
+    font-weight:500;
+    
+}
+@media screen and (max-width: 1024px) {
+    .container{
+        width: 30vw;
+        margin-left:2vw;
+    }
+    p{
+        font-size: 2vw;
+    };
+}
+@media screen and (max-width: 500px) {
+    .container{
+        width: 45vw;
+        margin-left:4vw;
+    }
+    .image{
+        width: 60%;
+    }
+    p{
+        font-size: 3vw;
+    }
+}
+@media screen and (max-width: 320px) {
+    .container{
+        width: 45vw;
+        margin-left:3vw;
+    }
+    .row{
+        padding-left: 0.5vw;
+    }
+
+    *
+{
+    padding:0px;
+    margin:0px;
+}
+}

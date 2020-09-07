@@ -9,11 +9,12 @@
 {
     width: 100vw;
 }
+
 .font,.font2
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size:23px;
+    font-size:18px;
     word-spacing: 7px;
 }
 
@@ -39,20 +40,26 @@
     border-right:1px solid white ;
 }
 
-.container:hover
+.container:hover .image
 {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transform: scale(1.4);
+
 }
 .image
 {
     width: 10vw;
+    transition:0.1s;
 }
+
 @media screen and (max-width: 768px) {
 .container
 {
    
     width:25vw;
     height:200px;
+}
+.font,.font2{
+    font-size: 15px;
 }
 .image{
     width: 13vw;
@@ -68,4 +75,9 @@
     .image{
         width: 30vw;
     }
+    .center
+    {
+        text-align:center;
+    }
+    
     }
